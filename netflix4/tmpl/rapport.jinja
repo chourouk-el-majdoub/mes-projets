@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+	<title>Titre de la page</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+
+<body>
+    <h1>Liste des films où a jouer l'actrice: {{ nom }}</h1>
+    <table>
+
+		
+		
+		{% for i in films_cast.index: %}
+        <tr>
+            <td>{{ films_cast.iloc[i]['title'] }}</td>
+        </tr>
+		{% endfor %}
+       
+    </table>
+	<h2>Liste des catégories des films où a jouer l'actrice: {{ nom }}</h2>
+	<img src="listed.png" alt="listed_in" />
+	
+	<footer> 
+	{{ time_stamp }}
+	</footer> 
+
+</body>
+</html>
+
+
